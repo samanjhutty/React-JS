@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Event Listener via Direct Method</button>
+    <button id="btn2">Event Listener via function call</button>
+    <p id="pp">hello, welcome to react js classes</p>
+
+    <script>
+        document.getElementById('btn1').addEventListener("click",(()=>{
+            document.getElementById('pp').innerHTML=Date();
+        }))
+
+        document.getElementById('btn2').addEventListener("click",myEvent)
+
+        function myEvent(){
+            document.getElementById('pp').innerHTML=Date();
+        }
+    </script>
+</body>
+</html>
