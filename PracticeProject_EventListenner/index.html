@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Forms</title>
+</head>
+<body id="body">
+<h1 id="h1Heading" class="h">Enter your Details</h1>
+<button id="btnAddForm">Add Forms</button><br><br>
+<div id="divForm">
+<input type="text" class="inputField">
+<button id="btnAddField">Add Fields</button>
+<br>
+</div>
+    <script>
+let field_id=0;
+let form_id=1;
+
+document.getElementById("btnAddField").addEventListener("click",()=>{
+    let div2=document.createElement("div2")
+    div2.innerHTML="<input type='text' class='inputField_"+field_id+"' ><br>";
+    field_id+=1;
+    document.getElementById("divForm").appendChild(div2);    
+})
+
+document.getElementById("btnAddForm").addEventListener("click",()=>{
+    let div3=document.createElement("div3")
+    div3.innerHTML="<input type='text' class='inputField"+form_id+"'><button id='btnAddField"+form_id+"'>Add Fields</button><br>"
+    
+    document.getElementById("body").appendChild(div3)
+
+    document.getElementById("btnAddField"+form_id).addEventListener("click",()=>{
+    let div4=document.createElement("div4")
+    div4.innerHTML="<input type='text' class='inputField_"+form_id+"'><br>";
+    div3.appendChild(div4);    
+    form_id+=1;
+})
+field_id+=1;
+})
+
+    </script>
+</body>
+</html>

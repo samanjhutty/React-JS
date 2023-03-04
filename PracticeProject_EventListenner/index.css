@@ -1,0 +1,24 @@
+h1{
+    /*for tag*/
+    text-align: center;
+}
+
+*{ 
+    /*for whole document*/
+}
+body{
+    padding: 8;
+}
+.h{
+    /*for class*/
+    font-style: italic;
+}
+
+input{
+    margin: 8;
+}
+
+#btnAddForm{
+    /*for id*/
+    float: right;
+}
